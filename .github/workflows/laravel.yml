@@ -72,6 +72,8 @@ jobs:
           k8s-url: https://0F8DDF7A214DD05DE9FBCDEF601462C7.gr7.ap-south-1.eks.amazonaws.com
           k8s-secret: ${{ secrets.KUBERNETES_SECRET }}
 
+      - uses: actions/checkout@v4
+      
       - name: Deploy to the Kubernetes cluster
         uses: azure/k8s-deploy@v1
         with:
