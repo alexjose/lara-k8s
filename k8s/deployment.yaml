@@ -17,5 +17,5 @@ spec:
         image: ghcr.io/alexjose/lara-k8s:latest
         ports:
         - containerPort: 8181
-        imagePullSecrets:
-        - name: github-container-registry
+      imagePullSecrets:
+      - name: github-container-registry
