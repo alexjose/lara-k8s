@@ -10,4 +10,5 @@ spec:
     tier: backend
   ports:
     - protocol: TCP
-      port: 8181
+      port: 80
+      name: http

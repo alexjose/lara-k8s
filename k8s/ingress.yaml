@@ -14,4 +14,4 @@ spec:
               service:
                 name: lara-app
                 port:
-                  number: 8181
+                  number: 80
