@@ -35,7 +35,7 @@ jobs:
 
   build:
     name: Build
-    # needs: test
+    needs: test
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -63,7 +63,7 @@ jobs:
 
   deploy:
     name: Deploy
-    needs: [ build ]
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Set the Kubernetes context
@@ -83,5 +83,6 @@ jobs:
             k8s/deployment.yaml
             k8s/ingress.yaml
             k8s/service.yaml
+            k8s/hpa.yml
           images: |
             ghcr.io/alexjose/lara-k8s:${{ github.sha }}

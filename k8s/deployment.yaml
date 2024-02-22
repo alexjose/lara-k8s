@@ -4,6 +4,7 @@ metadata:
   name: laravel-deployment
 spec:
   replicas: 3
+  
   selector:
     matchLabels:
       app: laravel-app
@@ -17,5 +18,13 @@ spec:
         image: ghcr.io/alexjose/lara-k8s:latest
         ports:
         - containerPort: 80
+        resources:
+          requests:
+            cpu: "200m"
+            memory: "256Mi"
+          limits:
+            cpu: "500m"
+            memory: "512Mi"
       imagePullSecrets:
       - name: github-container-registry
+      
