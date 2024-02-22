@@ -83,6 +83,6 @@ jobs:
             k8s/deployment.yaml
             k8s/ingress.yaml
             k8s/service.yaml
-            k8s/hpa.yml
+            # k8s/hpa.yml
           images: |
             ghcr.io/alexjose/lara-k8s:${{ github.sha }}
