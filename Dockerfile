@@ -5,7 +5,7 @@ RUN npm install
 RUN npm run build
 RUN rm -rf /app/node_modules
 
-FROM alexjose/lara-k8s-php-fpm:latest
+FROM ghcr.io/alexjose/lara-k8s-php-fpm:latest
 
 COPY --from=node /app /app
 WORKDIR /app
