@@ -1,7 +1,12 @@
 name: Laravel
 
 on:
-  push:
+  pull_request:
+    types:
+      - opened
+
+permissions: write-all
+
 jobs:
   test:
     name: Test
