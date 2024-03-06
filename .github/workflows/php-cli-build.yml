@@ -1,4 +1,4 @@
-name: Laravel
+name: Build PHP FPM Image
 
 on:
   push:
@@ -27,7 +27,7 @@ jobs:
       - name: Build and push the Docker image
         uses: docker/build-push-action@v5
         with:
-          context: .docker/php-cli
+          context: "{{defaultContext}}:.docker/php-cli"
           push: true
           tags: |
             ghcr.io/alexjose/lara-k8s-php-fpm:latest
