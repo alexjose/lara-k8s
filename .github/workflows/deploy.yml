@@ -1,4 +1,4 @@
-name: "App Build"
+name: Build
 
 on:
   push:
@@ -33,7 +33,7 @@ jobs:
         DB_DATABASE: database/database.sqlite
       run: php artisan test
 
-  # build:
+  build:
     name: Build
     # needs: test
     runs-on: ubuntu-latest
