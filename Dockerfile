@@ -5,7 +5,7 @@ RUN npm install
 RUN npm run build
 RUN rm -rf /app/node_modules
 
-FROM php:8.2-cli
+FROM php:8.3-cli
 
 RUN apt-get update -y && apt-get install -y openssl zip unzip git libonig-dev
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
